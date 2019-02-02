@@ -1,0 +1,74 @@
+.login.inputs input
+{
+  padding: 15px 15px 15px 30px;
+  margin: 0 0 10px 0;
+  width: 353px; /* 353 + 2 + 45 = 400 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+.login.nickname
+{
+  background-position: 5px -2px !important;
+}
+
+.login.password
+{
+  background-position: 5px -52px !important;
+}
+
+.inputs input:focus
+{
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+.login.actions
+{
+  //margin: 25px 0 0 0;
+  text-align: center;
+}
+
+.login.submit
+{   
+  background-color: #ffb94b;
+  background-image: linear-gradient(to bottom, #fddb6f, #ffb94b);
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d69e31 #e3a037 #d5982d #e3a037;
+
+  height: 35px;
+  padding: 0;
+  width: 120px;
+  cursor: pointer;
+  font: bold 15px Arial;
+  color: #8f5a0a;
+}
+
+.login.submit:hover,.login.submit:focus
+{   
+  background-color: #fddb6f;
+  background-image: linear-gradient(to bottom, #ffb94b, #fddb6f);
+} 
+
+.login.submit:active
+{   
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+}
+
+.login.actions a
+{
+  color: #3151A2;    
+  float: right;
+  line-height: 35px;
+  margin-left: 10px;
+}

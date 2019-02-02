@@ -1,0 +1,15 @@
+.vehicle-type-radios {
+  padding: 10px;
+}
+
+input[type=radio]:checked + .orange-rd{
+  background: #f90;
+}
+
+input[type=radio]:checked + .green-rd{
+  background: #91ff37;
+}
+
+input[type=radio]:checked + .blue-rd{
+  background: #658aff;
+}

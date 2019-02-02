@@ -1,0 +1,75 @@
+.form-label {
+  height: 51px;
+  padding: 2px 0;
+  font-size: 200%;
+  text-align: center;
+}
+
+input[type=submit].btn-submit{
+  width: 120px;
+  height: 45px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: 25px;
+	font-family: "HG丸ゴシックM-PRO", "HGMaruGothicMPRO";
+  margin-bottom: 10px;
+}
+
+.btn-submit:hover{
+	opacity:0.7;
+  cursor: pointer;
+}
+
+input[type=search]#number-input{
+  width: 135px;
+  height: 45px;
+  font-size:100%;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+section#name-search{
+  width: 530px;
+  height: 235px;
+}
+
+div#name-label{
+  background: #68d000;
+}
+
+div#name-form{
+  padding: 10px 0;
+  background: #91ff37;
+  font-size: 150%;
+  text-align: center;
+}
+
+p#name-text{
+	font-family: "HG丸ゴシックM-PRO", "HGMaruGothicMPRO";
+}
+
+input[type=search]#name-input{
+  width: 300px;
+  height: 45px;
+  font-size:100%;
+  color: #000;
+}
+
+a#new-contract{
+  width: 530px;
+  height: 70px;
+  background: #658aff;
+  margin: 15px 0;
+  text-align: center;
+  display: table;
+  border-collapse: separate;
+}
+
+p.link-text{
+  font-size: 35px;
+	font-family: "HG丸ゴシックM-PRO", "HGMaruGothicMPRO";
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}

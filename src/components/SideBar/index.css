@@ -1,0 +1,33 @@
+.side{
+  width: 160px;
+  height: 610px;
+  padding: 15px 10px;
+  background-color: #d7d0c3;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  float:left;
+}
+
+.side a:hover{
+}
+
+.normal-btn{
+  width: 120px;
+  height: 80px;
+  margin: 15px auto;
+  border: none;
+  background: #f90;
+  font-size: 20px;
+	font-family: "HG丸ゴシックM-PRO", "HGMaruGothicMPRO";
+}
+
+.admin-btn{
+  width: 120px;
+  height: 80px;
+  margin: 15px auto;
+  border: none;
+  background: #658aff;
+  font-size: 20px;
+	font-family: "HG丸ゴシックM-PRO", "HGMaruGothicMPRO";
+}

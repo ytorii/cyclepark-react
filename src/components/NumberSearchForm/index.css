@@ -1,0 +1,15 @@
+section.number-search {
+  width: 530px;
+  margin: 20px 0;
+}
+
+.number-label {
+  background: #f90;
+}
+
+.number-form{
+  height: 125px;
+  background: #fc6;
+  font-size: 150%;
+  text-align: center;
+}

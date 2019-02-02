@@ -1,0 +1,17 @@
+.header{
+  height: 55px;
+  background:-webkit-linear-gradient(to right, #f90, #fc6); /*webkit*/
+  background:linear-gradient(to right, #f90, #fc6); /*IE10 & future */
+	font-size: 200%;
+}
+
+h1.header-title {
+  float: left;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+.header-avatar {
+  float: right;
+  margin-right: 30px;
+}

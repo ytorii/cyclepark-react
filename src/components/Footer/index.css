@@ -1,0 +1,6 @@
+.footer{
+  clear: both;
+  height: 45px;
+  background:-webkit-linear-gradient(to right, #f90, #fc6); /*webkit*/
+  background:linear-gradient(to right, #f90, #fc6); /*IE10 & future */
+}
