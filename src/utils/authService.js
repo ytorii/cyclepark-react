@@ -1,7 +1,13 @@
+import firebase from './firebase'
+
 export default {
-  getCurrentUser: () => ({
-    accountId: 'momo-taro-industries',
-    displayName: 'Momo Taro',
-    jsonWebToken: 'a019lsmr909l12e',
-  })
+  getCurrentUser: () => {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        return user
+      } else {
+        return false
+      }
+    })
+  }
 }

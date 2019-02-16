@@ -7,7 +7,7 @@ export default createSwitch({
   paths: {
     '/': createRedirect('/signin'),
     '/signin': async env =>
-      env.context.currentUser ? (
+      await env.context.currentUser ? (
         createRedirect(
           env.params.redirectTo
             ? decodeURIComponent(env.params.redirectTo) : '/menu'
