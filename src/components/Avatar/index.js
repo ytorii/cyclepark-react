@@ -3,8 +3,8 @@ import './index.css'
 
 const Avatar = ({ user }) => (
   <div>
-    <span className="nickname">{ user.nickname }</span>
-    <img src={user.image} alt={user.nickname} />
+    <span className="user-nickname">{ user.displayName }</span>
+    <img src={user.photoURL} alt={user.displayName} />
   </div>
 );
 

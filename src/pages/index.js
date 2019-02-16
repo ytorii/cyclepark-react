@@ -1,7 +1,8 @@
 import React from 'react'
 import { createPage, createSwitch, createRedirect } from 'navi'
-import MenuPage from '../components/MenuPage'
-import LoginPage from '../components/LoginPage'
+import MenuPage from './MenuPage'
+import LoginPage from './LoginPage'
+import UserContext from '../components/UserContext'
 
 export default createSwitch({
   paths: {
@@ -16,12 +17,20 @@ export default createSwitch({
         getContent: () => <LoginPage />
       }),
     '/menu': env => {
-      if (!env.context.currentUser) {
+      const user = env.context.currentUser
+      if (!user) {
         return createRedirect('/signin')
       }
 
+      const UserProvider = UserContext.Provider
+
+      // CurrentUserは別に作って、Providerをここで作ってUser を注入するイメージかな？
       return createPage({
-        getContent: () => <MenuPage />
+        getContent: () => (
+          <UserProvider value={ user }>
+            <MenuPage />
+          </UserProvider>
+        )
       })
     },
   }

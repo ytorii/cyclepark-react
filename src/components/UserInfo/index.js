@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Avatar from '../Avatar'
+import LogoutButton from '../LogoutButton'
+import UserContext from '../UserContext'
 
-const user = {
-  image: "https://avatars1.githubusercontent.com/u/10824691?s=40&v=4",
-  nickname: "YTorii"
+const UserInfo = () => {
+
+  const userData = useContext(UserContext)
+
+  return (
+    <div>
+      { userData &&
+        <div>
+          <Avatar user={ userData }/>
+          <LogoutButton />
+        </div>
+      }
+    </div>
+  )
 }
-
-const UserInfo = props => (
-  <Avatar user={ user }/>
-)
 
 export default UserInfo
