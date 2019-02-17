@@ -6,25 +6,30 @@ import UserContext from '../components/UserContext'
 
 export default createSwitch({
   paths: {
-    '/': createRedirect('/signin'),
-    '/signin': async env =>
-      await env.context.currentUser ? (
-        createRedirect(
-          env.params.redirectTo
-            ? decodeURIComponent(env.params.redirectTo) : '/menu'
-        )
+    '/': createRedirect('/menu'),
+
+    '/signin': env => {
+      const { redirectTo } = env.params
+
+      return env.context.currentUser ? (
+        createRedirect( redirectTo ? decodeURIComponent(env.params.redirectTo) : '/menu')
       ) : createPage({
-        getContent: () => <LoginPage />
-      }),
+        getContent: () => <LoginPage userLoaded={env.context.userLoaded}/>
+      })
+    },
+
     '/menu': env => {
       const user = env.context.currentUser
+
       if (!user) {
-        return createRedirect('/signin')
+        const { mountpath, search } = env
+        return createRedirect(
+          `/signin?redirectTo=${encodeURIComponent(mountpath + search)}`
+        )
       }
 
       const UserProvider = UserContext.Provider
 
-      // CurrentUserは別に作って、Providerをここで作ってUser を注入するイメージかな？
       return createPage({
         getContent: () => (
           <UserProvider value={ user }>

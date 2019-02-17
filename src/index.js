@@ -12,13 +12,19 @@ import * as serviceWorker from './serviceWorker';
 async function main() {
   let navigation = createBrowserNavigation({
     pages,
-    context: { currentUser: firebase.auth().currentUser },
+    context: {
+      currentUser: firebase.auth().currentUser,
+      userLoaded: false
+    },
   })
 
   // Subscribe to new authentication state, and use it to set the
   // navigation context and thus recompute the routing state.
   firebase.auth().onAuthStateChanged(user => {
-    navigation.setContext({ currentUser: user })
+    navigation.setContext({
+      currentUser: user,
+      userLoaded: true
+    })
   })
 
   // Wait until async content is ready, or has failed.

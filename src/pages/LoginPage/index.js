@@ -1,10 +1,9 @@
 import React from 'react'
-import LoginButton from '../../components/LoginButton'
+import FirebaseLoginButton from '../../components/FirebaseLoginButton'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import LoadingPage from '../LoadingPage'
 import './index.css'
-
-const onSubmit = () => alert('Clicked!')
 
 const LoginPage = () => (
   <div>
@@ -13,10 +12,7 @@ const LoginPage = () => (
       <div className="login-form">
         <div className="login-outer">
           <div className="login-inner">
-            <LoginButton onSubmit={onSubmit}/>
-            <div style={{color: "#000"}}>
-              <span> 登録していない方はこちら</span>
-            </div>
+            <FirebaseLoginButton/>
           </div>
         </div>
       </div>
@@ -25,4 +21,9 @@ const LoginPage = () => (
   </div>
 )
 
-export default LoginPage
+const withLoading = ({userLoaded}) => (
+  userLoaded ? <LoginPage/> : <LoadingPage/>
+)
+
+export default withLoading
+
