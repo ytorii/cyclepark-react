@@ -2,7 +2,7 @@ import React from 'react'
 import { createPage, createSwitch, createRedirect } from 'navi'
 import MenuPage from './MenuPage'
 import LoginPage from './LoginPage'
-import UserContext from '../components/UserContext'
+import UserContext from '../utils/UserContext'
 
 export default createSwitch({
   paths: {

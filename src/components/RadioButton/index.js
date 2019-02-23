@@ -5,7 +5,7 @@ const RadioButton = props => {
   const { value, labelClass, labelText, inputName } = props
 
   return (
-    <label key={value} className={`custom-rd-label radius ${labelClass}`} for={inputName}>
+    <label key={value} className={`custom-rd-label radius ${labelClass}`} htmlFor={inputName}>
       <input
         type="radio"
         name={ inputName }

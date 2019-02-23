@@ -28,7 +28,7 @@ const vehicleTypes = [
 
 const VehicleTypeRadio = props => (
   <div className="vehicle-type-radios">
-    { vehicleTypes.map(vehicleType => <RadioButton {...vehicleType} />) }
+    { vehicleTypes.map(vehicleType => <RadioButton {...vehicleType}  key={vehicleType.value}/>) }
   </div>
 )
 

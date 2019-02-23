@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Avatar from '../Avatar'
 import LogoutButton from '../LogoutButton'
-import UserContext from '../UserContext'
+import UserContext from '../../utils/UserContext'
 
 const UserInfo = () => {
 
